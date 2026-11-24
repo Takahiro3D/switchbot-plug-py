@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "switchbot-plug-py"
+version = "0.1.0"
+description = "SwitchBot Plug Mini BLE Advertisement Scanner in Python"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "bleak>=0.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+switchbot-plug = "switchbot_plug.cli:main"
